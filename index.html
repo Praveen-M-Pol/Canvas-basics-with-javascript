@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>JS-CANVAS</title>
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
+		<link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css'>
+	<script type="text/javascript" src="js/modernizr.js"></script>
+	<link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+<div class="container">
+	<div id="top">
+		<div class="topbar">
+		<div class="heading">
+			<font style="color: indigo;">T</font>
+			<font style="color: blue;">E</font>
+			<font style="color: red;">C</font>
+			<font style="color: limegreen;">H</font>
+			<font style="color: violet;">N</font>
+			<font style="color: yellow;">O</font>
+			<font style="color: red;">C</font>
+			<font style="color: orange;">K</font>
+		</div>
+			<div class="icons" style="">
+				<a href="https://www.facebook.com/profile.php?id=100010390099304" style="color: #2874A6;"><i class="fa fa-facebook"></i></a>
+			<a href="https://www.instagram.com/praveen_pol/" style="color: black;"><i class="fa fa-instagram"></i></a>
+		<a href="https://twitter.com/praveen_pol" style="color: #85C1E9;"><i class="fa fa-twitter"></i></a>
+	<a href="https://www.linkedin.com/in/praveen-pol-b10687148/" style="color: #21618C;"><i class="fa fa-linkedin"></i></a></div></div>
+		<h1 class="hb">A Small <font style="color: red;">Nock</font> towards the Evolving <font style="color: limegreen;">TECHNOLOGY...</font></h1><br><br><br>
+		<div class="subtop">
+			<div style="background-color: #F0F3F4;box-shadow: 5px 5px 5px #B3B6B7;">
+				<br><font style="color: orange;font-size: 140%;"><b><u>Why this Website?...</u></b></font><br><br>
+				<font style="color: #424949;font-size: 105%;">
+					This Webstite is built to give you javascript canvas codes and some other brainy front-end web designing codes, coded in
+					javascript. These are the javascript codes those keep one of the most simplest logics with keeping in mind 
+					a goal to reduce number of lines.<br>Hope you enjoy the Coding and flowthrow of the codes.  
+				</font>
+			</div>
+			<div style="position: relative;background-color: #F0F3F4;box-shadow: 5px 5px 5px #B3B6B7;">
+				<img src="pr.jpg" style="width: 100%;height: 100%;">
+				<div style="position: absolute;margin-top: -74%;width: 50%;height: 50%;margin-left: 0%;background-color: none;">
+					<b><font style="color: red;font-size: 120%;">DEVELOPER <font style="color: limegreen;">&</font> CONTRIBUTER</font><br><br>
+				<font style="color: ;">Praveen M Pol<br>
+					<a href="mailto:polpraveen1118@gmail.com">polpraveen1118@gmail.com</a><br>
+					Student and Webster at KLE Technological University<br></font></b>
+				</div>
+				</div>
+			</div>
+		</div>
+	<blockquote>
+		<div class="nav">
+		<div class="home" onmouseover="" style="cursor: pointer;"><a href="#top" style="border-bottom: none;"><b>HOME</b></a></div>
+		<div class="we" onmouseover="" style="cursor: pointer;" onclick="editor()"><b>WEB EDITER</b></div>
+		<div class="search" onclick="search()" onmouseover="" style="cursor: pointer;"><i class="fa fa-search"></i></div>
+		<div class="subscribe" onmouseover="" style="cursor: pointer;" onclick="subscribe()"><b>SUBSCRIBE</b></div>
+	    </div>
+	<h1 class="trending" style="color: #424949;">Some Basic Codes...</h1>
+	<div class="code">
+		<div class="main" onmouseover="" style="cursor: pointer;" onclick="line()">
+			<img src="line.jpg" style="width: 100%;border-radius: 2%;">
+	        <div class="sub"><b><u>LINE</u></b><br>Drawing line on Canvas</div>
+        </div>
+        <div class="main" onmouseover="" style="cursor: pointer;" onclick="circle()">
+        	<img src="circle.jpg" style="width: 100%;border-radius: 2%;">
+	        <div class="sub"><b><u>CIRCLE</u></b><br>Drawing circle on Canvas</div>
+        </div>
+        <div class="main" onmouseover="" style="cursor: pointer;" onclick="rect()">
+        	<img src="rect.jpg" style="width: 100%;border-radius: 2%;">
+	        <div class="sub"><b><u>RECTANGLE</u></b><br>Drawing rectangle on Canvas</div>
+        </div>
+	</div>
+	<div class="code">
+		<div class="main" onmouseover="" style="cursor: pointer;" onclick="mline()">
+			<img src="rain.jpg" style="width: 100%;border-radius: 2%;">
+	        <div class="sub"><b><u>MULTIPLE LINES</u></b><br>Drawing multiple lines on Canvas</div>
+        </div>
+        <div class="main" onmouseover="" style="cursor: pointer;" onclick="mobj()">
+        	<img src="mobj.jpg" style="width: 100%;border-radius: 2%;">
+	        <div class="sub"><b><u>MULTIPLE OBJECTS</u></b><br>Drawing multiple objects on Canvas</div>
+        </div>
+        <div class="main" onmouseover="" style="cursor: pointer;" onclick="star()">
+        	<img src="star.jpg" style="width: 100%;border-radius: 2%;">
+	        <div class="sub"><b><u>STAR</u></b><br>Drawing a on Canvas</div>
+        </div>
+	</div>
+	<div class="code">
+		<div class="main" onmouseover="" style="cursor: pointer;" onclick="wheel()">
+			<img src="wheel.jpg" style="width: 100%;border-radius: 2%;">
+	        <div class="sub"><b><u>WHEEL</u></b><br>Drawing  a wheel on Canvas</div>
+        </div>
+        <div class="main" onmouseover="" style="cursor: pointer;" onclick="dob()">
+        	<img src="draw.jpg" style="width: 100%;border-radius: 2%;">
+	        <div class="sub"><b><u>OBJECTS ON BUTTONS</u></b><br>Drawing objects on buttons in Canvas</div>
+        </div>
+        <div class="main" onmouseover="" style="cursor: pointer;" onclick="mobjb()">
+        	<img src="mobjb.jpg" style="width: 100%;border-radius: 2%;">
+	        <div class="sub"><b><u>MOVING OBJECTS</u></b><br>Movement of objects on Canvas</div>
+        </div>
+	</div>
+</div>
+	</blockquote>
+	<hr>
+	<div class="contact"><br>
+		<font><b>CONTACT DETAILS:</b></font><br><br>
+		<div class="im">
+			<img class="imm" src="praveen.png">
+		</div><br><br>
+		<font>PRAVEEN M POL</font><br>
+		<a href="mailto:polpraveen1118@gmail.com">polpraveen1118@gmail.com</a><br>
+        Student at KLE Technological University Hubli<br>
+        HUBLI INDIA<br>
+        Tel:<a href="tel:8217391164">8217391164</a><br><br>
+        <a href="https://www.facebook.com/profile.php?id=100010390099304" style="color: black;" class="f"><i class="fa fa-facebook"></i></a>
+		<a href="https://www.instagram.com/praveen_pol/" style="color: black;" class="i"><i class="fa fa-instagram"></i></a>
+		<a href="https://twitter.com/praveen_pol" style="color: black;" class="t"><i class="fa fa-twitter"></i></a>
+	    <a href="https://www.linkedin.com/in/praveen-pol-b10687148/" style="color: black;" class="l"><i class="fa fa-linkedin"></i></a>
+	</div>
+</body>
+</html>
+<script type="text/javascript">
+		function search() {
+			window.location.href='search.html';
+		}
+		function editor(){
+			window.location.href='cc.html';
+		}
+		function line(){
+			window.location.href='line.html';
+		}
+		function circle(){
+			window.location.href='circle.html';
+		}
+		function rect(){
+			window.location.href='rect.html';
+		}
+		function mline(){
+			window.location.href='rain.html';
+		}
+		function mobj(){
+			window.location.href='mobj.html';
+		}
+		function subscribe(){
+			window.location.href='subscribe.html';
+		}
+		function star(){
+			window.location.href='star.html';
+		}
+		function wheel(){
+			window.location.href='wheel.html';
+		}
+		function mobjb(){
+			window.location.href='mobjb.html';
+		}
+		function dob(){
+			window.location.href='dob.html';
+		}
+	</script>
+

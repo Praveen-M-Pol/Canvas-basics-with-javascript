@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<meta charset="utf-8">
+	<meta charset="utf-8" name="viewport" content="width=device-width, initial-scale=1.0">
+	<script type="text/javascript" src="js/modernizr.js"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+</head>
+<body>
+	<div class="editor">
+		<div class="outer">
+			<div class="top">
+				<button id="h" onmouseover="" style="cursor: pointer;"><b>HTML</b></button>
+                <button id="c" onmouseover="" style="cursor: pointer;"><b>CSS</b></button>
+                <button id="j" onmouseover="" style="cursor: pointer;"><b>JAVASCRIPT</b></button>
+			</div>
+<div id="html" style="background-color: #AED6F1;min-height:600px;width: 100%;" class="content" contenteditable>
+	&lt;!DOCTYPE html&gt;<br>
+	&lt;html&gt;<br>
+	&lt;head&gt;<br>
+	&lt;title&gt;Drawing a wheel&lt;/title&gt;
+	&lt;/head&gt;<br>
+	&lt;body&gt;<br>
+	&lt;canvas id='my'&gt;&lt;/canvas&gt;
+	&lt;/body&gt;<br>
+	&lt;/html&gt;<br>
+</div>
+<div id="css" style="background-color: #AED6F1;min-height:600px;width: 100%;display: none;" class="content" contenteditable>
+	html{}
+</div>
+<div id="js" style="background-color: #AED6F1;min-height:600px;width: 100%;display: none;" class="content" contenteditable>
+	<pre>
+var c=document.getElementById('my'),
+cc=c.getContext('2d');
+cc.strokeStyle='orange';
+cc.beginPath();
+cc.arc(150,100,8,0,2*Math.PI,true);
+cc.lineWidth=2;
+cc.stroke();
+cc.closePath();
+
+cc.beginPath();
+cc.arc(150,100,40,0,2*Math.PI,true);
+cc.lineWidth=10;
+cc.stroke();
+cc.closePath();
+
+cc.lineWidth=1;
+
+cc.beginPath();
+cc.moveTo(150,60);
+cc.lineTo(150,91);
+cc.stroke();
+cc.closePath();
+	
+cc.beginPath();
+cc.moveTo(190,80);
+cc.lineTo(156,96);
+cc.stroke();
+cc.closePath();
+
+cc.beginPath();
+cc.moveTo(180,130);
+cc.lineTo(152,108);
+cc.stroke();
+cc.closePath();
+
+cc.beginPath();
+cc.moveTo(110,90);
+cc.lineTo(144,104);
+cc.stroke();
+cc.closePath();
+
+cc.beginPath();
+cc.moveTo(110,390);
+cc.lineTo(148,108);
+cc.stroke();
+cc.closePath();
+	</pre>
+</div>
+</div>
+<div class="inner">
+	<div style="display: block; line-height: 300%;width: 100%;border: 1px solid black;background-color: #5499C7;text-align: center;"><b>OUTPUT</b></div>
+<iframe id="output" style="width: 100%;min-height: 590px;">output</iframe>
+</div>
+</div>
+<script type="text/javascript">
+
+	$(document).ready(function(){
+		$("#h").click(function(){
+			$("#html").show();
+			$("#css").hide();
+			$("#js").hide();
+		});
+		$("#c").click(function(){
+			$("#html").hide();
+			$("#css").show();
+			$("#js").hide();
+		});
+		$("#j").click(function(){
+			$("#html").hide();
+			$("#css").hide();
+			$("#js").show();
+		})
+	});
+</script>
+</body>
+</html>
+<script>
+window.onload=function(){
+    var html=document.getElementById("html"),
+        css=document.getElementById("css"),
+        js=document.getElementById("js"),
+        output=document.getElementById("output"),
+        working=false,
+        fill=function(){
+            if(working){
+                return false;
+            }
+            working=true;
+            var document=output.contentDocument,
+                style=document.createElement("style"),
+                script=document.createElement("script");
+            document.body.innerHTML=html.textContent;
+            style.innerHTML=css.textContent.replace(/\s/g,"");
+            script.innerHTML=js.textContent;
+            document.body.appendChild(style);
+            document.body.appendChild(script);
+            working=false;
+        };
+    html.onkeyup=fill;
+    css.onkeyup=fill;
+    js.onkeyup=fill;
+}
+function resizeIFrameToFitContent(iFrame){
+	iFrame.width=iFrame.contentWindow.document.body.scrollWidth;
+	iFrame.height=iFrame.contentWindow.document.body.scrollHeight;
+}
+window.addEventListener('DOMContentLoaded',function(e){
+	var iFrame=document.getElementById("output");
+	resizeIFrameToFitContent(iFrame);
+});
+</script>
+<style type="text/css">
+		.outer{border: 1px solid black;
+		width: 45%;
+		min-height: 600px;
+		top: 0%;
+		position: absolute;
+	}
+	.inner{
+width: 50%;
+height: 91%;
+margin-left: 48%;
+	}
+		.content{
+    background-color: #FAFAFA;}
+    .top{background-color: #3498DB;width: 100%;}
+   .top button{display: inline-block;line-height: 300%;margin-left: 10%;width: 20%;border: 1px solid black;border-radius: 15%;background-color: #5499C7;}
+   button:hover{box-shadow: 2% 2% 2% 2% #85C1E9;}
+   @media screen and (max-width: 790px)
+   {
+      .outer{width: 100%;
+      }
+      .inner{
+width: 100%;
+height: 50%;
+position: absolute;
+top: 120%;
+left: -47%;
+	}
+	.top button{display: inline-block;line-height: 300%;margin-left: 5%;width: 25%;border: 1px solid black;border-radius: 15%;background-color: #5499C7;}
+   }
+	</style>

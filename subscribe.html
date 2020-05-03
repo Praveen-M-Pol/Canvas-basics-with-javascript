@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+<form class="post" action="subscribe.php" method="GET">
+	<br>
+	<font class='t' style=""><b>Fill in your E-mail id to get all the notifications of newly posted Codes</b></font><br>
+<input type="email" name="email" placeholder="abc@gmail.com" required><br>
+<button type="submit" class="bu" onmouseover=""><b>SUBSCRIBE</b></button>
+</form>
+</body>
+</html>
+<style type="text/css">
+	html{background-color: #3498DB;
+}
+.post{
+	background-color: #7FB3D5;
+	color: #D35400;
+	margin-right: 30%;
+	margin-left: 30%;
+	margin-top: 10%;
+	height: 280px;
+	text-align: center;
+	font-size: 130%;
+	border-radius: 2%;
+}
+.post input{
+	margin-left: 2%;
+	width: 88%;
+	margin-top: 5%;
+	line-height: 300%;
+	border: 3px solid #B3B6B7;
+}
+.bu{
+	cursor: pointer;
+	width: 88%;
+	margin-left: 2%;
+	background-color: #85C1E9;
+	border-radius: 6%; 
+	border-style: none;
+	margin-top: 5%;
+	height: 20%;
+	color: #D35400;
+	border: 3px solid #B3B6B7;
+}
+.bu:hover{background-color: limegreen;border: 3px solid #B3B6B7;color: red;}
+@media screen and (max-width: 850px)
+{
+	.post{
+	margin-left: 20%;
+	margin-right: 20%;
+}
+}
+@media screen and (max-width: 600px)
+{
+	.post{
+	margin-left: 15%;
+	margin-right: 15%;
+	font-size: 110%;
+	height: 250px;
+}
+}
+@media screen and (max-width: 479px)
+{
+	.post{
+		margin-left: 5%;
+		margin-right: 5%;
+	}
+}
+</style>

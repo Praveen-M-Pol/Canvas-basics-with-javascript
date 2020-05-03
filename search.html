@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
+	<script type="text/javascript" src="js/modernizr.js"></script>
+</head>
+<body>
+	<form class='searchh' action='search.php' method='GET'>
+		<div class="se">
+			<input id='text' type='text' name='text' placeholder='Search...'>
+		<input id="submit" type="submit" name="submit" value="SEARCH">
+		</div>
+		</form>
+	<h1>Search your Code here...</h1>
+</body>
+</html>
+<style type="text/css">
+.se input{display: inline-block;}
+#text{
+	line-height:500%;
+	width:80%;
+	border: 2px solid #B3B6B7;
+	}
+	#submit{
+		background-color: #95A5A6;
+		width: 15%;
+		font-size: 120%;
+		line-height: 330%;
+		border-radius: 5%;
+		border-style: none;
+		box-shadow: 5px 5px 5px #B3B6B7;
+		cursor: pointer;
+
+	}
+	#text::placeholder{
+		color:#B3B6B7;
+		font-size:150%;
+		}
+	h1{
+		text-align:center;
+		margin-top:15%;
+		color:#95A5A6;
+		font-size:350%;
+	}
+	@media screen and (max-width: 600px)
+	{
+#text{
+	line-height:400%;
+	width:60%;
+	}
+	#submit{
+		width: 20%;
+		font-size: 100%;
+		line-height: 300%;
+	}
+	#text::placeholder{
+		font-size:100%;
+		}
+	h1{
+		font-size:250%;
+	}
+	}
+	@media screen and (max-width: 489px)
+	{
+			#text{
+	line-height:300%;
+	width:60%;
+	}
+	#submit{
+		width: 30%;
+		font-size: 80%;
+		line-height: 300%;
+	}
+	
+	h1{
+		font-size:250%;
+	}
+
+	}
+</style>
